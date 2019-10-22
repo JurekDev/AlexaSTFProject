@@ -2,6 +2,22 @@ const Alexa = require('ask-sdk-core');
 const i18n = require('i18next');
 
 
+const STFHandler ={
+    canHandle(handlerInput) {
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'STFIntentRequest'
+          && request.intent.name === 'STFIntent';
+      },
+      handle(handlerInput) {
+        const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+        return handlerInput.responseBuilder
+          .speak('Hi!')
+          .reprompt('HI!')
+          .getResponse();
+      },
+
+};
+
 const HelpHandler = {
     canHandle(handlerInput) {
       const request = handlerInput.requestEnvelope.request;
@@ -109,6 +125,7 @@ const HelpHandler = {
   
   exports.handler = skillBuilder
     .addRequestHandlers(
+      STFHandler,
       HelpHandler,
       ExitHandler,
       FallbackHandler,
