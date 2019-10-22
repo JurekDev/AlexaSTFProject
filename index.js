@@ -10,8 +10,11 @@ const STFHandler ={
       },
       handle(handlerInput) {
         const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+
+        const StfReadable = requestAttributes.t(ReadableStreamReader.caller);
+
         return handlerInput.responseBuilder
-          .speak('Hi!')
+          .speak('Hi!' + StfReadable)
           .reprompt('HI!')
           .getResponse();
       },
