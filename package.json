@@ -1,0 +1,19 @@
+{
+  "name": "alexastfproject",
+  "version": "1.0.0",
+  "description": "STF impementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JurekDev/AlexaSTFProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JurekDev/AlexaSTFProject/issues"
+  },
+  "homepage": "https://github.com/JurekDev/AlexaSTFProject#readme"
+}
